@@ -4,28 +4,56 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zzh.cloud</groupId>
-    <artifactId>user-consumer</artifactId>
+    <artifactId>discovery-eureka</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>user-consumer</name>
-    <description>Demo project for user consumer</description>
+    <name>discovery-eureka</name>
+    <description>Demo project for discovery-eureka</description>
+
     <parent>
         <groupId>com.zzh</groupId>
         <artifactId>clouddemo</artifactId>
         <version>1.0</version>
     </parent>
+
+    <properties>
+        <spring-cloud.version>Edgware.RELEASE</spring-cloud.version>
+    </properties>
+
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
@@ -35,4 +63,6 @@
             </plugin>
         </plugins>
     </build>
+
+
 </project>

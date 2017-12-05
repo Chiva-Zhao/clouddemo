@@ -16,6 +16,7 @@
     </parent>
     <modules>
         <module>user-provider</module>
+        <module>user-consumer</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
