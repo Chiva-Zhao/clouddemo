@@ -2,7 +2,7 @@ server:
   port: 8000
 spring:
   application:
-    name: cloud-demo
+    name: user-provider
   jpa:
     generate-ddl: false
     show-sql: true
@@ -12,6 +12,9 @@ spring:
     platform: h2
     schema: classpath:schema.sql
     data: classpath:data.sql
+  main:
+    banner-mode: "off"
+
 logging:
   level:
     root: INFO

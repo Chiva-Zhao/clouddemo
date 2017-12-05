@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: user-consumer
+server:
+  port: 8001
+user:
+  userServiceUrl: http://localhost:8000/user/
