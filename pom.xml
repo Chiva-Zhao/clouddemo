@@ -20,6 +20,7 @@
         <module>discovery-eureka</module>
         <module>user-provider-reg</module>
         <module>movie-consumer</module>
+        <module>movie-consumer-ribbon</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
