@@ -1,0 +1,9 @@
+INSERT INTO user (id, username, name, age, balance) VALUES (1, 'user1', '张三', 20, 100.00);
+INSERT INTO user (id, username, name, age, balance) VALUES (2, 'user2', '李四', 22, 100.00);
+INSERT INTO user (id, username, name, age, balance) VALUES (3, 'user3', '王五', 24, 100.00);
+INSERT INTO user (id, username, name, age, balance) VALUES (4, 'user4', '赵六', 26, 100.00);
+INSERT INTO user (id, username, name, age, balance) VALUES (5, 'user5', '李逵', 27, 100.00);
+INSERT INTO user (id, username, name, age, balance) VALUES (6, 'user6', '张远', 10, 100.00);
+INSERT INTO user (id, username, name, age, balance) VALUES (7, 'user7', '迪拜', 60, 100.00);
+INSERT INTO user (id, username, name, age, balance) VALUES (8, 'user8', '哈士奇', 40, 100.00);
+INSERT INTO user (id, username, name, age, balance) VALUES (9, 'user9', '关羽', 30, 100.00);

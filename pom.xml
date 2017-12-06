@@ -18,11 +18,14 @@
         <module>user-provider</module>
         <module>user-consumer</module>
         <module>discovery-eureka</module>
+        <module>user-provider-reg</module>
+        <module>movie-consumer</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <spring-cloud.version>Edgware.RELEASE</spring-cloud.version>
     </properties>
     <build>
         <plugins>
