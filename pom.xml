@@ -17,6 +17,7 @@
     <modules>
         <module>user-provider</module>
         <module>user-consumer</module>
+        <module>discovery-eureka</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
