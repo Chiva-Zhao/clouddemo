@@ -22,6 +22,7 @@
         <module>movie-consumer</module>
         <module>movie-consumer-ribbon</module>
         <module>movie-consumer-ribbon-cumtom</module>
+        <module>movie-consumer-ribbon-props</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

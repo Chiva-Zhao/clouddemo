@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: movie-consumer-ribbon-props
+server:
+  port: 8030
+eureka:
+  client:
+    healthcheck:
+      enable: true
+    service-url:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+user-provider-reg:
+  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule #轮调
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #随机分配
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
