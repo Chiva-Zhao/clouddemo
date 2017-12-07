@@ -22,13 +22,13 @@ logging:
 eureka:
   client:
     service-url:
-      defaultZone: http://admin:admin@localhost:8761/eureka #ĞèÒªÈÏÖ¤
+      defaultZone: http://admin:admin@localhost:8761/eureka #éœ€è¦è®¤è¯
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
     metadata-map:
       zone: ABC
       chiva: zhao
-      #    appname: appname-springms-provider-user    # Ö±½ÓÏÔÊ¾µÄÊÇAppÓ¦ÓÃµÄÃû³Æ£¬ÔÚ http://localhost:8761/ µØÖ·´¦¿ÉÒÔ¿´µ½¸Ã×¢²á·şÎñµÄÓ¦ÓÃÃû³Æ
-      #    # ÕâÀïÎÒÃÇ¾ÍÏÈ×¢ÊÍµô£¬ÖªµÀÕâ¸ö hostname µÄÓÃ·¨¾Í¿ÉÒÔÁË£¬ÏÈ×¢ÊÍµô²»Ó°ÏìºóÃæµÄ²âÊÔ
-      #    hostname: user              # È»ºóÎÒÃÇ¾Í¿ÉÒÔÍ¨¹ı http://user:7900/simple/1 À´·ÃÎÊÎÒÃÇµÄµØÖ·ÁË
+      #    appname: appname-springms-provider-user    # ç›´æ¥æ˜¾ç¤ºçš„æ˜¯Appåº”ç”¨çš„åç§°ï¼Œåœ¨ http://localhost:8761/ åœ°å€å¤„å¯ä»¥çœ‹åˆ°è¯¥æ³¨å†ŒæœåŠ¡çš„åº”ç”¨åç§°
+      #    # è¿™é‡Œæˆ‘ä»¬å°±å…ˆæ³¨é‡Šæ‰ï¼ŒçŸ¥é“è¿™ä¸ª hostname çš„ç”¨æ³•å°±å¯ä»¥äº†ï¼Œå…ˆæ³¨é‡Šæ‰ä¸å½±å“åé¢çš„æµ‹è¯•
+      #    hostname: user              # ç„¶åæˆ‘ä»¬å°±å¯ä»¥é€šè¿‡ http://user:7900/simple/1 æ¥è®¿é—®æˆ‘ä»¬çš„åœ°å€äº†
