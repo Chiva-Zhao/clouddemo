@@ -23,6 +23,7 @@
         <module>movie-consumer-ribbon</module>
         <module>movie-consumer-ribbon-cumtom</module>
         <module>movie-consumer-ribbon-props</module>
+        <module>movie-ribbon-without-eureka</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
