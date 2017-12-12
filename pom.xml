@@ -26,6 +26,7 @@
         <module>movie-ribbon-without-eureka</module>
         <module>movie-consumer-feign</module>
         <module>movie-consumer-feign-custom</module>
+        <module>movie-consumer-ribbon-hystrix</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
