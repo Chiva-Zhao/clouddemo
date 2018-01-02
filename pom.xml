@@ -28,6 +28,7 @@
         <module>movie-consumer-feign-custom</module>
         <module>movie-consumer-ribbon-hystrix</module>
         <module>movie-consumer-ribbon-hystrix-prop</module>
+        <module>movie-consumer-feign-hystrix</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
