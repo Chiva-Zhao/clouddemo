@@ -1,4 +1,4 @@
-package com.zzh.cloud.entity.controller;
+package com.zzh.cloud.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.zzh.cloud.entity.User;
@@ -21,15 +21,10 @@ public class MovieRibbonHystrixController {
     @GetMapping("/movie/{id}")
     @HystrixCommand(fallbackMethod = "findByIdFallback")
     public User findById(@PathVariable Long id) {
-        // http://localhost:7900/simple/
-        // VIP：virtual IP
-        // HAProxy Heartbeat
         return this.restTemplate.getForObject("http://user-provider-reg/user/" + id, User.class);
     }
 
     /**
-     * 当 springms-provider-user 服务宕机或者不可用时，即请求超时后会调用此方法。
-     *
      * @param id
      * @return
      */
