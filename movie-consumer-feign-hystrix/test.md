@@ -10,4 +10,4 @@
  8. 关闭 user-provider-reg 模块服务；
  9. 在浏览器输入地址 http://localhost:8110/movie/1 可以看到用户ID = 0 的用户信息被打印出来，表明该模块的Hystrix断路器模块起作用了；
  10. 再关闭 discovery-eureka 模块服务；
- 11. 再在浏览器输入地址 http://localhost:8110/appname-user-provider-reg 可以看到网页已经打印出链接不上服务的错误页面了，表明该模块禁用Hystrix断路器模块也起作用了；
+ 11. 再在浏览器输入地址 http://localhost:8110/user-provider-reg 可以看到网页已经打印出链接不上服务的错误页面了，表明该模块禁用Hystrix断路器模块也起作用了；
