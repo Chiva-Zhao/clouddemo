@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: movie-consumer-feign-hystrix
+server:
+  port: 8110
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+logging:
+  level:
+    com.zzh.cloud.feign.UserFeignClient: DEBUG
+    com.zzh.cloud.feign.UserFeignClient2: DEBUG
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+feign.hystrix.enabled: true
