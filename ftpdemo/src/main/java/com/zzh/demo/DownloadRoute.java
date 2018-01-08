@@ -14,7 +14,7 @@ import java.util.Date;
  * @version 1.0
  * @date 2018-1-8 0:18
  **/
-@Component
+//@Component
 public class DownloadRoute extends RouteBuilder {
 
     private static Logger logger = LoggerFactory.getLogger(DownloadRoute.class);
