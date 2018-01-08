@@ -1,0 +1,5 @@
+ftp.server.info: ftp://172.16.20.133:22/../home/temp/data?username=root&password=root&readLock=rename
+ftp.local.dir: file:~/downfolder
+camel:
+  springboot:
+    main-run-controller: true
