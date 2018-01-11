@@ -31,6 +31,7 @@
         <module>movie-consumer-feign-hystrix</module>
         <module>movie-consumer-feign-hystrix-factory</module>
         <module>gateway-zuul</module>
+        <module>gateway-zuul-attribute</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

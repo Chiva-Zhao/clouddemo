@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: gateway-zuul-attribute
+server:
+  port: 8155
+eureka:
+  datacenter: SpringCloud   # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Data center 显示信息
+  environment: Test         # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Environment 显示信息
+  client:
+    service-url:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+    healthcheck:  # 健康检查
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+# 测试一，自定义路径配置，给 springms-provider-user 微服务添加 path、serviceId 属性前缀地址，反向代理用户微服务
+zuul:
+  routes:
+    hmily:
+      path: /custom-path/**
+      serviceId: springms-provider-user # 注意这个名称是注册在eureka服务中的名称
+
+# 测试二，自定义路径配置，给 springms-provider-user 微服务添加 path、serviceId 属性前缀地址，反向代理用户微服务
+#zuul:
+#  routes:
+#    hmily:
+#      path: /custom-path/**
+#      serviceId: http://localhost:7900/ # 注意这个名称是 url 地址
+
+# 测试三：自定义路径配置，给微服务添加 prefix 属性前缀地址，反向代理所有微服务
+#zuul:
+#  prefix: /api
+
+# 测试四：自定义路径配置，给微服务添加 strip-prefix 属性前缀地址，反向代理所有微服务
+#zuul:
+#  prefix: /api
+#  strip-prefix: false
+
+# 测试五：自定义路径配置，针对测试四，再次修改 prefix 属性前缀地址，反向代理用户微服务
+#zuul:
+#  prefix: /simple
+#  strip-prefix: false
+logging:
+  level:
+    root: INFO
+    com.zzh.cloud: DEBUG
+    com.netflix: DEBUG
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
