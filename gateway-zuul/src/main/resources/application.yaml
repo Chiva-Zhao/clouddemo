@@ -33,10 +33,10 @@ ribbon:
 #    user-provider-reg: /user/**
 
 # 测试四，自定义路径配置，给 user-provider-reg 微服务添加前缀地址，代理、反向代理用户微服务，忽略禁用 movie-consumer 代理、反向代理路径
-#zuul:
-#  ignoredServices: movie-consumer
-#  routes:
-#    user-provider-reg: /user/**
+zuul:
+  ignoredServices: movie-consumer
+  routes:
+    user-provider-reg: /user/**
 
 #####################################################################################################
 # 解决第一次请求报超时异常的方案，因为 hystrix 的默认超时时间是 1 秒，因此请求超过该时间后，就会出现页面超时显示 ：
