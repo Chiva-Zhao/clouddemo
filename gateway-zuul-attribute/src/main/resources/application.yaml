@@ -4,43 +4,43 @@ spring:
 server:
   port: 8155
 eureka:
-  datacenter: SpringCloud   # ĞŞ¸Ä http://localhost:8761 µØÖ· Eureka Ê×Ò³ÉÏÃæ System Status µÄ Data center ÏÔÊ¾ĞÅÏ¢
-  environment: Test         # ĞŞ¸Ä http://localhost:8761 µØÖ· Eureka Ê×Ò³ÉÏÃæ System Status µÄ Environment ÏÔÊ¾ĞÅÏ¢
+  datacenter: SpringCloud   # ä¿®æ”¹ http://localhost:8761 åœ°å€ Eureka é¦–é¡µä¸Šé¢ System Status çš„ Data center æ˜¾ç¤ºä¿¡æ¯
+  environment: Test         # ä¿®æ”¹ http://localhost:8761 åœ°å€ Eureka é¦–é¡µä¸Šé¢ System Status çš„ Environment æ˜¾ç¤ºä¿¡æ¯
   client:
     service-url:
       defaultZone: http://admin:admin@localhost:8761/eureka
-    healthcheck:  # ½¡¿µ¼ì²é
+    healthcheck:  # å¥åº·æ£€æŸ¥
       enabled: true
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
-# ²âÊÔÒ»£¬×Ô¶¨ÒåÂ·¾¶ÅäÖÃ£¬¸ø springms-provider-user Î¢·şÎñÌí¼Ó path¡¢serviceId ÊôĞÔÇ°×ºµØÖ·£¬·´Ïò´úÀíÓÃ»§Î¢·şÎñ
-zuul:
-  routes:
-    hmily:
-      path: /custom-path/**
-      serviceId: springms-provider-user # ×¢ÒâÕâ¸öÃû³ÆÊÇ×¢²áÔÚeureka·şÎñÖĞµÄÃû³Æ
-
-# ²âÊÔ¶ş£¬×Ô¶¨ÒåÂ·¾¶ÅäÖÃ£¬¸ø springms-provider-user Î¢·şÎñÌí¼Ó path¡¢serviceId ÊôĞÔÇ°×ºµØÖ·£¬·´Ïò´úÀíÓÃ»§Î¢·şÎñ
+# æµ‹è¯•ä¸€ï¼Œè‡ªå®šä¹‰è·¯å¾„é…ç½®ï¼Œç»™ user-provider-reg å¾®æœåŠ¡æ·»åŠ  pathã€serviceId å±æ€§å‰ç¼€åœ°å€ï¼Œåå‘ä»£ç†ç”¨æˆ·å¾®æœåŠ¡
 #zuul:
 #  routes:
-#    hmily:
+#    chiva:
 #      path: /custom-path/**
-#      serviceId: http://localhost:7900/ # ×¢ÒâÕâ¸öÃû³ÆÊÇ url µØÖ·
+#      serviceId: user-provider-reg # æ³¨æ„è¿™ä¸ªåç§°æ˜¯æ³¨å†Œåœ¨eurekaæœåŠ¡ä¸­çš„åç§°
 
-# ²âÊÔÈı£º×Ô¶¨ÒåÂ·¾¶ÅäÖÃ£¬¸øÎ¢·şÎñÌí¼Ó prefix ÊôĞÔÇ°×ºµØÖ·£¬·´Ïò´úÀíËùÓĞÎ¢·şÎñ
+# æµ‹è¯•äºŒï¼Œè‡ªå®šä¹‰è·¯å¾„é…ç½®ï¼Œç»™ user-provider-reg å¾®æœåŠ¡æ·»åŠ  pathã€serviceId å±æ€§å‰ç¼€åœ°å€ï¼Œåå‘ä»£ç†ç”¨æˆ·å¾®æœåŠ¡
+#zuul:
+#  routes:
+#    chiva:
+#      path: /custom-path/**
+#      serviceId: http://localhost:7900/ # æ³¨æ„è¿™ä¸ªåç§°æ˜¯ url åœ°å€
+
+# æµ‹è¯•ä¸‰ï¼šè‡ªå®šä¹‰è·¯å¾„é…ç½®ï¼Œç»™å¾®æœåŠ¡æ·»åŠ  prefix å±æ€§å‰ç¼€åœ°å€ï¼Œåå‘ä»£ç†æ‰€æœ‰å¾®æœåŠ¡
 #zuul:
 #  prefix: /api
 
-# ²âÊÔËÄ£º×Ô¶¨ÒåÂ·¾¶ÅäÖÃ£¬¸øÎ¢·şÎñÌí¼Ó strip-prefix ÊôĞÔÇ°×ºµØÖ·£¬·´Ïò´úÀíËùÓĞÎ¢·şÎñ
+# æµ‹è¯•å››ï¼šè‡ªå®šä¹‰è·¯å¾„é…ç½®ï¼Œç»™å¾®æœåŠ¡æ·»åŠ  strip-prefix å±æ€§å‰ç¼€åœ°å€ï¼Œåå‘ä»£ç†æ‰€æœ‰å¾®æœåŠ¡
 #zuul:
 #  prefix: /api
 #  strip-prefix: false
 
-# ²âÊÔÎå£º×Ô¶¨ÒåÂ·¾¶ÅäÖÃ£¬Õë¶Ô²âÊÔËÄ£¬ÔÙ´ÎĞŞ¸Ä prefix ÊôĞÔÇ°×ºµØÖ·£¬·´Ïò´úÀíÓÃ»§Î¢·şÎñ
-#zuul:
-#  prefix: /simple
-#  strip-prefix: false
+# æµ‹è¯•äº”ï¼šè‡ªå®šä¹‰è·¯å¾„é…ç½®ï¼Œé’ˆå¯¹æµ‹è¯•å››ï¼Œå†æ¬¡ä¿®æ”¹ prefix å±æ€§å‰ç¼€åœ°å€ï¼Œåå‘ä»£ç†ç”¨æˆ·å¾®æœåŠ¡
+zuul:
+  prefix: /user
+  strip-prefix: false
 logging:
   level:
     root: INFO
