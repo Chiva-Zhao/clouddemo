@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: gateway-zuul-filter
+server:
+  port: 8215
+eureka:
+  datacenter: SpringCloud   # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Data center 显示信息
+  environment: Test         # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Environment 显示信息
+  client:
+    service-url:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+    healthcheck:  # 健康检查
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+logging:
+  level:
+    root: INFO
+    com.zzh.cloud: DEBUG
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+management:
+  security:
+    enabled: false

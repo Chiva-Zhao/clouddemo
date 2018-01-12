@@ -33,6 +33,7 @@
         <module>gateway-zuul</module>
         <module>gateway-zuul-attribute</module>
         <module>gateway-zuul-cluster</module>
+        <module>gateway-zuul-filter</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
