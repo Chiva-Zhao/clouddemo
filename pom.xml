@@ -36,6 +36,7 @@
         <module>gateway-zuul-filter</module>
         <module>gateway-zuul-regexp</module>
         <module>simple-upload</module>
+        <module>gateway-zuul-upload</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
