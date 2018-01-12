@@ -5,8 +5,8 @@ spring:
     name: simple-upload
   http:
       multipart:
-        max-file-size: 20Mb      # Max file size£¬Ä¬ÈÏ1M
-        max-request-size: 20Mb   # Max request size£¬Ä¬ÈÏ10M
+        max-file-size: 20Mb      # Max file sizeï¼Œé»˜è®¤1M
+        max-request-size: 20Mb   # Max request sizeï¼Œé»˜è®¤10M
 
 eureka:
   client:
@@ -14,6 +14,7 @@ eureka:
       defaultZone: http://admin:admin@localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
 logging:
   level:
     root: INFO

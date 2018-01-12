@@ -4,12 +4,12 @@ spring:
 server:
   port: 8185
 eureka:
-  datacenter: SpringCloud   # ĞŞ¸Ä http://localhost:8761 µØÖ· Eureka Ê×Ò³ÉÏÃæ System Status µÄ Data center ÏÔÊ¾ĞÅÏ¢
-  environment: Test         # ĞŞ¸Ä http://localhost:8761 µØÖ· Eureka Ê×Ò³ÉÏÃæ System Status µÄ Environment ÏÔÊ¾ĞÅÏ¢
+  datacenter: SpringCloud   # ä¿®æ”¹ http://localhost:8761 åœ°å€ Eureka é¦–é¡µä¸Šé¢ System Status çš„ Data center æ˜¾ç¤ºä¿¡æ¯
+  environment: Test         # ä¿®æ”¹ http://localhost:8761 åœ°å€ Eureka é¦–é¡µä¸Šé¢ System Status çš„ Environment æ˜¾ç¤ºä¿¡æ¯
   client:
     service-url:
       defaultZone: http://admin:admin@localhost:8761/eureka
-    healthcheck:  # ½¡¿µ¼ì²é
+    healthcheck:  # å¥åº·æ£€æŸ¥
       enabled: true
   instance:
     prefer-ip-address: true

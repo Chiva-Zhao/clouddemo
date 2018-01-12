@@ -1,8 +1,8 @@
 spring:
   application:
-    name: gateway-zuul-upload
+    name: gateway-zuul-fallback
 server:
-  port: 8195
+  port: 8200
 eureka:
   datacenter: SpringCloud   # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Data center 显示信息
   environment: Test         # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Environment 显示信息
@@ -14,12 +14,15 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+zuul:
+  ignoredServices: movie-consumer-ribbon-hystrix
+  routes:
+    user-provider-reg: /user/**
 logging:
   level:
     root: INFO
-    com.zzh.cloud: DEBUG
-    com.netflix: debug
+    com.zzh: DEBUG
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
