@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: gateway-zuul-cluster
+server:
+  port: 8165
+eureka:
+  datacenter: SpringCloud   # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Data center 显示信息
+  environment: Test         # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Environment 显示信息
+  client:
+    service-url:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+    healthcheck:  # 健康检查
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+# 测试一，API网关模块发现应用入口（添加 listOfServers 属性，测试 zuul 的负载均衡功能）
+zuul:
+  routes:
+    chiva:
+      path: /custom-path/**
+      serviceId: user-provider-reg
+
+# 注意，这里在运行的时候有个坑，如果以树形展开写法的话，那么就会出错了，所以这个配置还是避免用树形写法
+ribbon.eureka.enabled: false
+
+user-provider-reg: # 这里是 ribbon 要请求的微服务的 service-id 值
+  ribbon:
+    listOfServers: http://localhost:7900,http://localhost:7899,http://localhost:7898
+logging:
+  level:
+    root: INFO
+    com.zzh.cloud: DEBUG
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
