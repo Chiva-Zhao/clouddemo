@@ -38,6 +38,7 @@
         <module>simple-upload</module>
         <module>gateway-zuul-upload</module>
         <module>gateway-zuul-fallback</module>
+        <module>sidecar</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

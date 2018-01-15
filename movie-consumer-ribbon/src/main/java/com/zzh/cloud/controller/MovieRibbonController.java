@@ -23,22 +23,22 @@ public class MovieRibbonController {
     }
 
     /**
-     * 添加给 springms-sidecar 微服务做测试用的代码。
+     * 添加给 sidecar 微服务做测试用的代码。
      *
      * @return
      */
     @GetMapping("/sidecar")
     public String sidecar() {
-        return this.restTemplate.getForObject("http://springms-sidecar/", String.class);
+        return this.restTemplate.getForObject("http://sidecar/", String.class);
     }
 
     /**
-     * 添加给 springms-sidecar 微服务做测试用的代码。
+     * 添加给 sidecar 微服务做测试用的代码。
      *
      * @return
      */
     @GetMapping("/sidecar/health.json")
     public String sidecarHealth() {
-        return this.restTemplate.getForObject("http://springms-sidecar/health.json", String.class);
+        return this.restTemplate.getForObject("http://sidecar/health.json", String.class);
     }
 }
