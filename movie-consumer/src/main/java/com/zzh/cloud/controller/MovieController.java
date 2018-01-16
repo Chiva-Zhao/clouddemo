@@ -20,4 +20,24 @@ public class MovieController {
     public User findById(@PathVariable Long id) {
         return this.restTemplate.getForObject(this.userServicePath + id, User.class);
     }
+
+    /**
+     * 添加给 sidecar 微服务做测试用的代码。
+     *
+     * @return
+     */
+    @GetMapping("/sidecar")
+    public String sidecar() {
+        return this.restTemplate.getForObject("http://localhost:8200/sidecar", String.class);
+    }
+
+    /**
+     * 添加给 sidecar 微服务做测试用的代码。
+     *
+     * @return
+     */
+    @GetMapping("/sidecar/health.json")
+    public String sidecarHealth() {
+        return this.restTemplate.getForObject("http://localhost:8200/sidecar/health.json", String.class);
+    }
 }
