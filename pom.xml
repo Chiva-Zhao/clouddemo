@@ -40,6 +40,7 @@
         <module>gateway-zuul-fallback</module>
         <module>sidecar</module>
         <module>config-server</module>
+        <module>config-client</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
