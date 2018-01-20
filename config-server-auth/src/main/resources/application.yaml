@@ -1,0 +1,16 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+server:
+  port: 8275
+spring:
+  application:
+    name: config-server-auth
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Chiva-Zhao/clouddemo_config
