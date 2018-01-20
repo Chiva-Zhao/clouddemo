@@ -1,6 +1,9 @@
 > keytool -genkeypair -alias mytestkey -keyalg RSA \
   -dname "CN=Web Server,OU=Unit,O=Organization,L=City,S=State,C=US" \
   -keypass changeme -keystore server.jks -storepass letmein
+  
+> ./keytool.exe -genkeypair -alias config-server -keyalg RSA -dname "CN=zhenhua, OU=kingnet, O=kdc, L=shanghai, ST=shanghai, C=china" -keypass 222222 -keystore config-server.keystore -storepass 111111
+
 ### 一. 配置服务端ClientServer对配置文件内容进行对称加解密（设置配置服务端文件对称加解密）：
  1. 注解：EnableConfigServer
  2. 编辑 application.yml 文件，注意填写 encrypt.key 属性字段值，该值的作用在于给配置文件的内容进行加密用的；

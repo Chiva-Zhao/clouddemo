@@ -11,5 +11,5 @@ spring:
 management:
   security:
     enabled: false
-#          username: xxx
-#          password: xxxity
+my:
+  password: '{cipher}964a2b8b5298c508c5f59ec10cc5a01e6f825c239cfe239c4927a329513e9130'
