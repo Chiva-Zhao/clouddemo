@@ -49,6 +49,7 @@
         <module>config-client-auth</module>
         <module>config-client-refresh</module>
         <module>config-client-refresh-bus</module>
+        <module>user-provider-devtools</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
