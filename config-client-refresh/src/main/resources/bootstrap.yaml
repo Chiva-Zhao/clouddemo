@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8220
+      profile: refresh
+      label: master #当 ConfigServer 的后端存储的是 Git 的时候，默认就是 master
+  application:
+    name: foobar  #取 foobar-refresh.yml 这个文件的 application 名字，即为 foobar 名称
