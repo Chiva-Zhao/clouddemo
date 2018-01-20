@@ -2,7 +2,7 @@
  1. 下载 rabbitmq-server-3.6.11.exe. otp_win64_20.0-rc2.exe 两个 windows 安装软件；
  2. 双击安装 otp_win64_20.0-rc2.exe；
  3. 双击安装 rabbitmq-server-3.6.11.exe；
- 4. 两个都安装完后会发现服务中多了一个 Rabbitmq 的服务，服务名称为：RabbitMQ；
+ 4. 两个都安装完后会发现服务中多了一个 Rabbitmq 的服务，服务名称为：RabbitMQ；启动服务：rabbitmq-service.bat  start
  5. 如果想查看管理界面的话，执行命令：rabbitmq-plugins enable rabbitmq_management，然后重启 RabbitMQ 服务；
  6. 通过windows命令 netstat -aon|findstr "5672" 查看该端口是否被占用，占用的话，说明安装基本上一切正常；
  7. 通过 http://localhost:15672 地址可以进入服务端的管理页面；
@@ -12,14 +12,14 @@
 2. 编辑 application.yaml. bootstrap.yaml 文件，添加相关客户端配置；
 3. 启动 config-server 模块服务，启动1个端口；
 4. 启动 config-client-refresh-bus 模块服务，启动3个端口（8300. 8301. 8302）；
-5. 在浏览器输入地址 http://localhost:8300/profile 正常情况下会输出远端服务的配置内容（内容为：profile: profile-refreshbus）；
-6. 在浏览器输入地址 http://localhost:8301/profile 正常情况下会输出远端服务的配置内容（内容为：profile: profile-refreshbus）；
-7. 在浏览器输入地址 http://localhost:8302/profile 正常情况下会输出远端服务的配置内容（内容为：profile: profile-refreshbus）；
-8. 修改 blob/master/foobar-refreshbus.yaml 内容，修改后为 profile: profile-refreshbus-refresh；
+5. 在浏览器输入地址 http://localhost:8300/profile 正常情况下会输出远端服务的配置内容（内容为：profile: foobar-refreshbus1）；
+6. 在浏览器输入地址 http://localhost:8301/profile 正常情况下会输出远端服务的配置内容（内容为：profile: foobar-refreshbus1）；
+7. 在浏览器输入地址 http://localhost:8302/profile 正常情况下会输出远端服务的配置内容（内容为：profile: foobar-refreshbus1）；
+8. 修改 blob/master/foobar-refreshbus.yaml 内容，修改后为 profile: foobar-refreshbus2；
 9. 打开windows命令窗口，执行命令： >curl.exe -X POST http://localhost:8300/bus/refresh 或者端口选择 8301. 8302 都可以生效；
-10. 然后刷新 http://localhost:8300/profile 网页，正常情况下会输出远端服务的配置内容（内容为：profile: profile-refreshbus-refresh）；
-11. 然后刷新 http://localhost:8301/profile 网页，正常情况下会输出远端服务的配置内容（内容为：profile: profile-refreshbus-refresh）；
-12. 然后刷新 http://localhost:8302/profile 网页，正常情况下会输出远端服务的配置内容（内容为：profile: profile-refreshbus-refresh）；
+10. 然后刷新 http://localhost:8300/profile 网页，正常情况下会输出远端服务的配置内容（内容为：profile: foobar-refreshbus2）；
+11. 然后刷新 http://localhost:8301/profile 网页，正常情况下会输出远端服务的配置内容（内容为：profile: foobar-refreshbus2）；
+12. 然后刷新 http://localhost:8302/profile 网页，正常情况下会输出远端服务的配置内容（内容为：profile: foobar-refreshbus2）；
 * 总结：这里通过执行刷新命令，然后将多台 ConfigClient 客户端刷新，来达到获取最新的远端服务器配置。
    但是这里终究还是得靠手动执行一条刷新命令，但总比每台服务器执行刷新命令要好很多； 
 ### 二. 配置刷新服务客户端Client应用入口（设置 Git 的 WebHooks 属性，通过 Git 提交代码来实现全自动动态刷新配置服务客户端配置）：
