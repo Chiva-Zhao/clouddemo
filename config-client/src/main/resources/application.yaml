@@ -1,15 +1,15 @@
 server:
   port: 8225
-# ²âÊÔÒ»£ºÅäÖÃ·şÎñ¿Í»§¶ËClientÓ¦ÓÃÈë¿Ú£¨Õı³£²âÊÔ ConfigClient £©
+# æµ‹è¯•ä¸€ï¼šé…ç½®æœåŠ¡å®¢æˆ·ç«¯Clientåº”ç”¨å…¥å£ï¼ˆæ­£å¸¸æµ‹è¯• ConfigClient ï¼‰
 #profile: profile-dev(local)
-# ²âÊÔ¶ş£ºÅäÖÃ·şÎñ¿Í»§¶ËClientÓ¦ÓÃÈë¿Ú£¨Á´½Ó ClientServer ²âÊÔ£©
+# æµ‹è¯•äºŒï¼šé…ç½®æœåŠ¡å®¢æˆ·ç«¯Clientåº”ç”¨å…¥å£ï¼ˆé“¾æ¥ ClientServer æµ‹è¯•ï¼‰
 #spring:
 #  cloud:
 #    config:
 #      uri: http://localhost:8220
 #      profile: dev
-#      label: master #µ± ConfigServer µÄºó¶Ë´æ´¢µÄÊÇ Git µÄÊ±ºò£¬Ä¬ÈÏ¾ÍÊÇ master
+#      label: master #å½“ ConfigServer çš„åç«¯å­˜å‚¨çš„æ˜¯ Git çš„æ—¶å€™ï¼Œé»˜è®¤å°±æ˜¯ master
 #  application:
-#    name: foobar  #È¡ foobar-dev.yml Õâ¸öÎÄ¼şµÄ application Ãû×Ö£¬¼´Îª foobar Ãû³Æ
-# ²âÊÔËÄ£ºÅäÖÃ·şÎñ¿Í»§¶ËClientÓ¦ÓÃÈë¿Ú£¨Á´½Ó ClientServer ²âÊÔ£¬Í¬Ê±±¾µØÒ²ÓĞÒ»·İÅäÖÃÎÄ¼ş£¬ÄÇÃ´¸ÃÈçºÎ¾ñÔñÄØ£¿£©
+#    name: foobar  #å– foobar-dev.yml è¿™ä¸ªæ–‡ä»¶çš„ application åå­—ï¼Œå³ä¸º foobar åç§°
+# æµ‹è¯•å››ï¼šé…ç½®æœåŠ¡å®¢æˆ·ç«¯Clientåº”ç”¨å…¥å£ï¼ˆé“¾æ¥ ClientServer æµ‹è¯•ï¼ŒåŒæ—¶æœ¬åœ°ä¹Ÿæœ‰ä¸€ä»½é…ç½®æ–‡ä»¶ï¼Œé‚£ä¹ˆè¯¥å¦‚ä½•æŠ‰æ‹©å‘¢ï¼Ÿï¼‰
 profile: profile-local-dev

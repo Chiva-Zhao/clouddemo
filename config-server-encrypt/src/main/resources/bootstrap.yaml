@@ -1,0 +1,7 @@
+encrypt:
+#  key: zzh
+  key-store:
+    password: letmein
+    alias: mytestkey
+    location: server.jks
+    secret: changeme
