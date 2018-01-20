@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8255
+      profile: prod
+      label: master #当 ConfigServer 的后端存储的是 Git 的时候，默认就是 master
+  application:
+    name: foobar
