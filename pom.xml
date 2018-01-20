@@ -46,6 +46,7 @@
         <module>config-server-encrypt-rsa</module>
         <module>config-client-encrypt-rsa</module>
         <module>config-server-auth</module>
+        <module>config-client-auth</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
