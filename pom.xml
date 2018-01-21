@@ -53,6 +53,7 @@
         <module>mysql-jpa</module>
         <module>mysql-crud</module>
         <module>mysql-jdbc</module>
+        <module>mysql-jdbc-trans</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

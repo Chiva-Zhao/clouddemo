@@ -1,8 +1,8 @@
 server:
-  port: 8315
+  port: 8335
 spring:
   application:
-    name: mysql-jdbc  #全部小写
+    name:   #全部小写
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://xxx/test?useUnicode=true&characterEncoding=UTF-8
