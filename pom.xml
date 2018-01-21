@@ -51,6 +51,7 @@
         <module>config-client-refresh-bus</module>
         <module>user-provider-devtools</module>
         <module>mysql-jpa</module>
+        <module>mysql-crud</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
