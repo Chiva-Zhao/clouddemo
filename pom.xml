@@ -55,6 +55,7 @@
         <module>mysql-jdbc</module>
         <module>mysql-jdbc-trans</module>
         <module>mysql-mybatis</module>
+        <module>mysql-mybatis-mapper</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
