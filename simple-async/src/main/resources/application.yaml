@@ -1,0 +1,5 @@
+server:
+  port: 8345
+spring:
+  application:
+    name: simple-async  #全部小写

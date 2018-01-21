@@ -58,6 +58,7 @@
         <module>mysql-mybatis-mapper</module>
         <module>mysql-mybatis-ehcache</module>
         <module>simple-scheduler</module>
+        <module>simple-async</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
