@@ -1,0 +1,22 @@
+server:
+  port: 8385
+spring:
+  application:
+    name: mysql-mybatis-ehcache  #全部小写
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://xxx/test?useUnicode=true&characterEncoding=UTF-8
+      username: root
+      password: root
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.zzh.boot: DEBUG
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+  type-aliases-package:   # mybatis.type-aliases-package：指定domain类的基包，即指定其在*Mapper.xml文件中可以使用简名来代替全类名
+
