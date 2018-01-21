@@ -2,7 +2,7 @@ server:
   port: 8385
 spring:
   application:
-    name: mysql-mybatis-ehcache  #È«²¿Ğ¡Ğ´
+    name: mysql-mybatis-ehcache  #å…¨éƒ¨å°å†™
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://xxx/test?useUnicode=true&characterEncoding=UTF-8
@@ -18,5 +18,5 @@ logging:
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
   config-location: classpath:mybatis/mybatis-config.xml
-  type-aliases-package:   # mybatis.type-aliases-package£ºÖ¸¶¨domainÀàµÄ»ù°ü£¬¼´Ö¸¶¨ÆäÔÚ*Mapper.xmlÎÄ¼şÖĞ¿ÉÒÔÊ¹ÓÃ¼òÃûÀ´´úÌæÈ«ÀàÃû
+  type-aliases-package:   # mybatis.type-aliases-packageï¼šæŒ‡å®šdomainç±»çš„åŸºåŒ…ï¼Œå³æŒ‡å®šå…¶åœ¨*Mapper.xmlæ–‡ä»¶ä¸­å¯ä»¥ä½¿ç”¨ç®€åæ¥ä»£æ›¿å…¨ç±»å
 

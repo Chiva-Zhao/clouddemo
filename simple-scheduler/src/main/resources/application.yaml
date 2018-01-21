@@ -1,0 +1,5 @@
+server:
+  port: 8340
+spring:
+  application:
+    name: simple-schedule  #全部小写
