@@ -52,6 +52,7 @@
         <module>user-provider-devtools</module>
         <module>mysql-jpa</module>
         <module>mysql-crud</module>
+        <module>mysql-jdbc</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
