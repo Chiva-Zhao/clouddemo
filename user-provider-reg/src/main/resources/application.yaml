@@ -22,7 +22,9 @@ logging:
 eureka:
   client:
     service-url:
-      defaultZone: http://admin:admin@localhost:8761/eureka #需要认证
+#      defaultZone: http://admin:admin@localhost:8761/eureka #需要认证
+      defaultZone: http://admin:admin@peer1:8401/eureka,http://admin:admin@peer2:8402/eureka,http://admin:admin@peer3:8403/eureka
+
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
@@ -31,4 +33,4 @@ eureka:
       chiva: zhao
       #    appname: appname-springms-provider-user    # 直接显示的是App应用的名称，在 http://localhost:8761/ 地址处可以看到该注册服务的应用名称
       #    # 这里我们就先注释掉，知道这个 hostname 的用法就可以了，先注释掉不影响后面的测试
-      #    hostname: user              # 然后我们就可以通过 http://user:7900/simple/1 来访问我们的地址了
+      #    hostname: user              # 然后我们就可以通过 http://user:7900/user/1 来访问我们的地址了

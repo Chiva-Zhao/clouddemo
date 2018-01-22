@@ -60,6 +60,7 @@
         <module>simple-scheduler</module>
         <module>simple-async</module>
         <module>simple-aop-log</module>
+        <module>discovery-eureka-ha</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
