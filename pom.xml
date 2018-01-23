@@ -61,6 +61,7 @@
         <module>simple-async</module>
         <module>simple-aop-log</module>
         <module>discovery-eureka-ha</module>
+        <module>quartz-config-cluster</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
