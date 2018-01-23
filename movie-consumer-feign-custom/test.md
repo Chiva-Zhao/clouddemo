@@ -22,7 +22,7 @@
   1. 说明接入 Feign 已经成功的在客户端进行了负载均衡处理；
   2. 之所以会在客户端进行轮询打印日志信息，是因为没有配置调度算法，而默认的调度算法就是轮询，所以会出现轮询打印日志信息；
 ### 四. 电影微服务使用定制化Feign在客户端进行负载均衡调度并为Feign配置帐号密码登录认证Eureka（配置日志级别）：
-   1. application.yml 修改：logging.level.com.springms.cloud.feign.UserFeignCustomClient: DEBUG
+   1. application.yml 修改：logging.level.com.zzh.cloud.feign.UserFeignCustomClient: DEBUG
    2. 编写 TestFeignCustomConfiguration 新增日志级别的方法
    3. 启动 discovery-eureka 模块服务，启动1个端口；
    4. 启动 user-provider-reg 模块服务，启动1个端口；

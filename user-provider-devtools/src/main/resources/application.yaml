@@ -2,7 +2,7 @@ server:
   port: 8305
 spring:
   application:
-    name: user-provider-devtools  #ȫ��Сд
+    name: user-provider-devtools  #全部小写
   jpa:
     generate-ddl: false
     show-sql: true
@@ -20,4 +20,4 @@ logging:
     org.hibernate: INFO
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
-    com.springms: DEBUG
+    com.zzh.cloud: DEBUG

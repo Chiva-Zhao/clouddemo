@@ -10,8 +10,8 @@ spring:
     password: Xxxsczx.1
   jpa:
     hibernate:
-      #ddl-auto: create #ddl-auto:ÉèÎªcreate±íÊ¾Ã¿´Î¶¼ÖØĞÂ½¨±í
-      ddl-auto: update #ddl-auto:ÉèÎªupdate±íÊ¾Ã¿´Î¶¼²»»áÖØĞÂ½¨±í
+      #ddl-auto: create #ddl-auto:è®¾ä¸ºcreateè¡¨ç¤ºæ¯æ¬¡éƒ½é‡æ–°å»ºè¡¨
+      ddl-auto: update #ddl-auto:è®¾ä¸ºupdateè¡¨ç¤ºæ¯æ¬¡éƒ½ä¸ä¼šé‡æ–°å»ºè¡¨
     show-sql: true
 #spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
 #spring.datasource.driver-class-name=com.mysql.jdbc.Driver
@@ -44,4 +44,4 @@ logging:
     org.hibernate: INFO
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
-    com.springms: DEBUG
+    com.zzh.cloud: DEBUG
